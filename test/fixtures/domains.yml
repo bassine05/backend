@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  expiration_date: 2019-05-23 21:23:16
+  status: MyString
+  registrar: one
+  contact: one
+  extension: one
+  operation: one
+
+two:
+  name: MyString
+  expiration_date: 2019-05-23 21:23:16
+  status: MyString
+  registrar: two
+  contact: two
+  extension: two
+  operation: two

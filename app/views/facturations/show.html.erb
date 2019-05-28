@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Num:</strong>
+  <%= @facturation.num %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @facturation.account %>
+</p>
+
+<p>
+  <strong>Remise:</strong>
+  <%= @facturation.remise %>
+</p>
+
+<p>
+  <strong>Dateenvoi:</strong>
+  <%= @facturation.dateEnvoi %>
+</p>
+
+<p>
+  <strong>Datelimite:</strong>
+  <%= @facturation.dateLimite %>
+</p>
+
+<p>
+  <strong>Registrar:</strong>
+  <%= @facturation.registrar %>
+</p>
+
+<%= link_to 'Edit', edit_facturation_path(@facturation) %> |
+<%= link_to 'Back', facturations_path %>

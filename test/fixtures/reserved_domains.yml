@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code_auth: MyString
+  motif: MyText
+  tag: one
+
+two:
+  code_auth: MyString
+  motif: MyText
+  tag: two

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reserved Domains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code auth</th>
+      <th>Motif</th>
+      <th>Tag</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reserved_domains.each do |reserved_domain| %>
+      <tr>
+        <td><%= reserved_domain.code_auth %></td>
+        <td><%= reserved_domain.motif %></td>
+        <td><%= reserved_domain.tag %></td>
+        <td><%= link_to 'Show', reserved_domain %></td>
+        <td><%= link_to 'Edit', edit_reserved_domain_path(reserved_domain) %></td>
+        <td><%= link_to 'Destroy', reserved_domain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reserved Domain', new_reserved_domain_path %>

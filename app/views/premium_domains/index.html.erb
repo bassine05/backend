@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Premium Domains</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Offre</th>
+      <th>Date debut</th>
+      <th>Date fin</th>
+      <th>Categorie</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @premium_domains.each do |premium_domain| %>
+      <tr>
+        <td><%= premium_domain.offre %></td>
+        <td><%= premium_domain.date_debut %></td>
+        <td><%= premium_domain.date_fin %></td>
+        <td><%= premium_domain.categorie %></td>
+        <td><%= link_to 'Show', premium_domain %></td>
+        <td><%= link_to 'Edit', edit_premium_domain_path(premium_domain) %></td>
+        <td><%= link_to 'Destroy', premium_domain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Premium Domain', new_premium_domain_path %>

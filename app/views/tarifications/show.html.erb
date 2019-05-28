@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tarification.price %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @tarification.type %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @tarification.year %>
+</p>
+
+<%= link_to 'Edit', edit_tarification_path(@tarification) %> |
+<%= link_to 'Back', tarifications_path %>

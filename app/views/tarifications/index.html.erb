@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tarifications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Type</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tarifications.each do |tarification| %>
+      <tr>
+        <td><%= tarification.price %></td>
+        <td><%= tarification.type %></td>
+        <td><%= tarification.year %></td>
+        <td><%= link_to 'Show', tarification %></td>
+        <td><%= link_to 'Edit', edit_tarification_path(tarification) %></td>
+        <td><%= link_to 'Destroy', tarification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarification', new_tarification_path %>

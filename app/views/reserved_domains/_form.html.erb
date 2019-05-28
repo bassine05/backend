@@ -1,0 +1,32 @@
+<%= form_with(model: reserved_domain, local: true) do |form| %>
+  <% if reserved_domain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reserved_domain.errors.count, "error") %> prohibited this reserved_domain from being saved:</h2>
+
+      <ul>
+      <% reserved_domain.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code_auth %>
+    <%= form.text_field :code_auth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :motif %>
+    <%= form.text_area :motif %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.text_field :tag_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

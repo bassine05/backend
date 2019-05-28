@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Offre:</strong>
+  <%= @premium_domain.offre %>
+</p>
+
+<p>
+  <strong>Date debut:</strong>
+  <%= @premium_domain.date_debut %>
+</p>
+
+<p>
+  <strong>Date fin:</strong>
+  <%= @premium_domain.date_fin %>
+</p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @premium_domain.categorie %>
+</p>
+
+<%= link_to 'Edit', edit_premium_domain_path(@premium_domain) %> |
+<%= link_to 'Back', premium_domains_path %>

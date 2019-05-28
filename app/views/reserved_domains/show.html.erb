@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code auth:</strong>
+  <%= @reserved_domain.code_auth %>
+</p>
+
+<p>
+  <strong>Motif:</strong>
+  <%= @reserved_domain.motif %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @reserved_domain.tag %>
+</p>
+
+<%= link_to 'Edit', edit_reserved_domain_path(@reserved_domain) %> |
+<%= link_to 'Back', reserved_domains_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @registrar.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @registrar.phone %>
+</p>
+
+<p>
+  <strong>Fax:</strong>
+  <%= @registrar.fax %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @registrar.mail %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @registrar.url %>
+</p>
+
+<p>
+  <strong>Adresse:</strong>
+  <%= @registrar.adresse %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @registrar.city %>
+</p>
+
+<%= link_to 'Edit', edit_registrar_path(@registrar) %> |
+<%= link_to 'Back', registrars_path %>
