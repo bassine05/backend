@@ -1,6 +1,6 @@
 class FacturationsController < ApplicationController
   before_action :set_facturation, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /facturations
   # GET /facturations.json
   def index

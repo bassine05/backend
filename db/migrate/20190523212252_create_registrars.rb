@@ -7,6 +7,9 @@ class CreateRegistrars < ActiveRecord::Migration[5.2]
       t.string :mail
       t.string :url
       t.string :adresse
+      t.string :NINEA
+      t.string :GURID
+      t.string :IDEXTERNE
       t.references :city, foreign_key: true
 
       t.timestamps

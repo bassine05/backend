@@ -1,6 +1,6 @@
 class TarificationsController < ApplicationController
   before_action :set_tarification, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /tarifications
   # GET /tarifications.json
   def index

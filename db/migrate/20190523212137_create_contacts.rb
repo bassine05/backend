@@ -8,7 +8,6 @@ class CreateContacts < ActiveRecord::Migration[5.2]
       t.string :mail
       t.integer :type
       t.timestamps
-
     end
   end
 end

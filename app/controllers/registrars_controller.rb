@@ -1,6 +1,6 @@
 class RegistrarsController < ApplicationController
   before_action :set_registrar, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /registrars
   # GET /registrars.json
   def index
@@ -24,17 +24,33 @@ class RegistrarsController < ApplicationController
   # POST /registrars
   # POST /registrars.json
   def create
-    @registrar = Registrar.new(registrar_params)
-
-    respond_to do |format|
-      if @registrar.save
-        format.html { redirect_to @registrar, notice: 'Registrar was successfully created.' }
-        format.json { render :show, status: :created, location: @registrar }
-      else
-        format.html { render :new }
-        format.json { render json: @registrar.errors, status: :unprocessable_entity }
-      end
+    success= true
+    if registrar_params[:id].present?
+      @registrar= Registrar.find(registrar_params[:id])
+      success= @registrar.update registrar_params
+    else
+      @registrar= Registrar.new(registrar_params)
+      success= @registrar.save
     end
+    if success
+      render json: @registrar.id, status: :created
+    else
+      render json: @registrar.errors, status: :unprocessable_entity
+    end
+
+
+    #@registrar = Registrar.new(registrar_params)
+
+    #respond_to do |format|
+     # if @registrar.save
+     #   format.html { redirect_to @registrar, notice: 'Registrar was successfully created.' }
+      #  format.json { render :show, status: :created, location: @registrar }
+      #else
+      
+       # format.html { render :new }
+        #format.json { render json: @registrar.errors, status: :unprocessable_entity }
+      #end
+    #end
   end
 
   # PATCH/PUT /registrars/1
@@ -69,6 +85,6 @@ class RegistrarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def registrar_params
-      params.require(:registrar).permit(:name, :phone, :fax, :mail, :url, :adresse, :city_id)
+      params.require(:registrar).permit(:name, :phone, :fax, :mail, :url, :adresse, :NINEA, :GURID, :IDEXTERNE, :city_id)
     end
 end

@@ -1,6 +1,6 @@
 class ExtensionsController < ApplicationController
   before_action :set_extension, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /extensions
   # GET /extensions.json
   def index

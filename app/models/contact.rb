@@ -1,3 +1,4 @@
 class Contact < ApplicationRecord
-    enum type: [:administrative, :technique, :financier]
+    belongs_to :registrar
+    enum type: [:administrative, :technique, :financier, :NOC, :abuse]
 end

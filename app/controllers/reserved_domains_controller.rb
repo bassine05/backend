@@ -1,6 +1,6 @@
 class ReservedDomainsController < ApplicationController
   before_action :set_reserved_domain, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /reserved_domains
   # GET /reserved_domains.json
   def index

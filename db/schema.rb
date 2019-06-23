@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_212333) do
     t.string "phone"
     t.string "fax"
     t.string "mail"
-    t.string "type", limit: 14, null: false
+    t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -107,6 +107,9 @@ ActiveRecord::Schema.define(version: 2019_05_23_212333) do
     t.string "mail"
     t.string "url"
     t.string "adresse"
+    t.string "NINEA"
+    t.string "GURID"
+    t.string "IDEXTERNE"
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

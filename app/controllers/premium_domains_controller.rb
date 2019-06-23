@@ -1,6 +1,6 @@
 class PremiumDomainsController < ApplicationController
   before_action :set_premium_domain, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :verify_authenticity_token
   # GET /premium_domains
   # GET /premium_domains.json
   def index
